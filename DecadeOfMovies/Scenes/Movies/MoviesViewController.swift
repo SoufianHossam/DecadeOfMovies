@@ -57,17 +57,28 @@ class MoviesViewController: UIViewController {
 
 extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        viewModel.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.filteredMovies.count
+        viewModel.sections[section].values.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.id) as! MovieCell
-        cell.titleLabel.text = viewModel.filteredMovies[indexPath.row].title
+        cell.titleLabel.text = viewModel.sections[indexPath.section].values[indexPath.row].title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.sections[section].title
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let view = view as? UITableViewHeaderFooterView
+        view?.textLabel?.textColor = UIColor.systemBlue
+        view?.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        view?.textLabel?.text = view?.textLabel?.text?.capitalized
     }
 }
 

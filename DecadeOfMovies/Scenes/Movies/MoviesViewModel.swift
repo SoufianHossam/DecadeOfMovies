@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MoviesBusinessLogic {
-    var filteredMovies: [Movie] { get }
+    var sections: [MovieSection] { get }
     var lastSearchQuery: String { set get }
     var newDataArrived: (() -> Void)? { set get }
     var showNoResults: ((Bool) -> Void)? { set get }
@@ -23,11 +23,10 @@ class MoviesViewModel: MoviesBusinessLogic {
     var lastSearchQuery: String = ""
     private var moviesManager: MoviesFetchable
     private var movies: [Movie] = []
-    private(set) var filteredMovies: [Movie] = [] {
+    private(set) var sections: [MovieSection] = [] {
         didSet {
             newDataArrived?()
-            showNoResults?(!filteredMovies.isEmpty)
-            
+            showNoResults?(!sections.isEmpty)
         }
     }
     // Closures
@@ -41,11 +40,11 @@ class MoviesViewModel: MoviesBusinessLogic {
     // MARK: Functions
     func fetchMovies() {
         movies = moviesManager.getMovies()
-        filteredMovies = movies
+        sections = [MovieSection(values: movies)]
     }
     
     func resetFilteredMovies() {
-        filteredMovies = movies
+        sections = [MovieSection(values: movies)]
         lastSearchQuery = ""
     }
     
@@ -53,20 +52,27 @@ class MoviesViewModel: MoviesBusinessLogic {
         guard let query = query, !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         lastSearchQuery = query
         
-        filteredMovies = movies.filter({
+        let filteredMovies = movies.filter({
             $0.title.lowercased().contains(query.lowercased()) ||
             "\($0.year)" == query ||
             "\($0.rating)" == query ||
             $0.cast.joined(separator: " ").lowercased().contains(query.lowercased()) ||
             $0.genres.joined(separator: " ").lowercased().contains(query.lowercased())
         })
+        
+        formatFilteredMovies(filteredMovies)
     }
     
-//    func groupFilteredMoviesByYear() {
-//        // Set the flag of search
-//        let groupingDictionary = Dictionary(grouping: filteredMovies, by: { $0.year })
-//        print(groupingDictionary)
-//        let groupingArray = Array(groupingDictionary.values)
-//        groupingDictionary.keys
-//    }
+    func formatFilteredMovies(_ movies: [Movie]) {
+        let groupedMoviesByYear = Dictionary(grouping: movies, by: { $0.year })
+        
+        sections = groupedMoviesByYear
+            .map({ group in
+                let section = MovieSection()
+                section.title = "Year \(group.key)"
+                section.values = Array(group.value.sorted(by: >).prefix(5))
+                return section
+            })
+            .sorted(by: >)
+    }
 }

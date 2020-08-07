@@ -31,3 +31,9 @@ extension Movie: CustomStringConvertible {
         "Title: \(title)\nYear: \(year)\nCast: \(cast)\nGenres: \(genres)\nRating: \(rating)"
     }
 }
+
+extension Movie {
+    static func > (lhs: Movie, rhs: Movie) -> Bool {
+        lhs.year > rhs.year
+    }
+}
