@@ -10,6 +10,7 @@ import ObjectMapper
 
 class Movie: Mappable {
     var title: String = ""
+    var year: Int = 0
     var cast: [String] = []
     var genres: [String] = []
     var rating: Int = 0
@@ -18,6 +19,7 @@ class Movie: Mappable {
     
     func mapping(map: Map) {
         title <- map["title"]
+        year <- map["year"]
         cast <- map["cast"]
         genres <- map["genres"]
         rating <- map["rating"]
@@ -26,6 +28,6 @@ class Movie: Mappable {
 
 extension Movie: CustomStringConvertible {
     var description: String {
-        "Title: \(title)\nCast: \(cast)\nGenres: \(genres)\nRating: \(rating)"
+        "Title: \(title)\nYear: \(year)\nCast: \(cast)\nGenres: \(genres)\nRating: \(rating)"
     }
 }

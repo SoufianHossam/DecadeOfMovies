@@ -20,7 +20,13 @@ class AppRouter: AppRoutable {
         let moviesVC = MoviesViewController.instance
         moviesVC.viewModel = MoviesViewModel()
         
-        window?.rootViewController = UINavigationController(rootViewController: moviesVC)
+        let nc = UINavigationController(rootViewController: moviesVC)
+        nc.navigationBar.isTranslucent = false
+        nc.navigationBar.tintColor = .white
+        nc.navigationBar.barStyle = .black
+        nc.navigationBar.barTintColor = #colorLiteral(red: 0.1085461576, green: 0.109620872, blue: 0.109620872, alpha: 1)
+        
+        window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }
 }
