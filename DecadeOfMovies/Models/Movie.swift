@@ -1,0 +1,31 @@
+//
+//  Movie.swift
+//  DecadeOfMovies
+//
+//  Created by Soufian Hossam on 8/7/20.
+//  Copyright © 2020 Soufian Hossam. All rights reserved.
+//
+
+import ObjectMapper
+
+class Movie: Mappable {
+    var title: String = ""
+    var cast: [String] = []
+    var genres: [String] = []
+    var rating: Int = 0
+    
+    required init?(map: Map) { }
+    
+    func mapping(map: Map) {
+        title <- map["title"]
+        cast <- map["cast"]
+        genres <- map["genres"]
+        rating <- map["rating"]
+    }
+}
+
+extension Movie: CustomStringConvertible {
+    var description: String {
+        "Title: \(title)\nCast: \(cast)\nGenres: \(genres)\nRating: \(rating)"
+    }
+}
