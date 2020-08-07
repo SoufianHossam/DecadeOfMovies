@@ -19,6 +19,7 @@ class AppRouter: AppRoutable {
         
         let moviesVC = MoviesViewController.instance
         moviesVC.viewModel = MoviesViewModel()
+        moviesVC.router = MoviesRouter(moviesVC)
         
         let nc = UINavigationController(rootViewController: moviesVC)
         nc.navigationBar.isTranslucent = false

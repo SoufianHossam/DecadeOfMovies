@@ -63,7 +63,7 @@
                                 </connections>
                             </tableView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noResult" translatesAutoresizingMaskIntoConstraints="NO" id="Jfa-W9-Raf">
-                                <rect key="frame" x="92" y="323" width="250" height="250"/>
+                                <rect key="frame" x="90" y="194" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="9L4-eI-i3U"/>
                                     <constraint firstAttribute="height" constant="250" id="Po6-7s-6NE"/>
@@ -73,10 +73,10 @@
                         <color key="backgroundColor" red="0.10854615756159051" green="0.10962087199289339" blue="0.10962087199289339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8P1-hl-R8J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="I09-Ws-QWQ"/>
-                            <constraint firstItem="Jfa-W9-Raf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="RSv-hQ-pwK"/>
+                            <constraint firstItem="Jfa-W9-Raf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="8" id="RSv-hQ-pwK"/>
+                            <constraint firstItem="Jfa-W9-Raf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Y8f-yd-VNv"/>
                             <constraint firstItem="8P1-hl-R8J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dPu-o6-lUz"/>
                             <constraint firstItem="8P1-hl-R8J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hWc-c0-IR4"/>
-                            <constraint firstItem="Jfa-W9-Raf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nWP-aL-s2f"/>
                             <constraint firstItem="8P1-hl-R8J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p45-gK-eZY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

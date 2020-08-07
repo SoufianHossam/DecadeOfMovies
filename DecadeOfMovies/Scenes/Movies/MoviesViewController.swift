@@ -15,6 +15,7 @@ class MoviesViewController: UIViewController {
     
     // MARK: Variables
     var viewModel: MoviesBusinessLogic!
+    var router: MoviesRoutable!
     var searchController: UISearchController!
     
     // MARK: View life cycle
@@ -79,6 +80,10 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         view?.textLabel?.textColor = UIColor.systemBlue
         view?.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         view?.textLabel?.text = view?.textLabel?.text?.capitalized
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        router.navigateToMovieDetails(viewModel.sections[indexPath.section].values[indexPath.row])
     }
 }
 

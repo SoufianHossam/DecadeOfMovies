@@ -12,6 +12,14 @@
 		62D78D81654842C85EDEDEF2 /* Pods_DecadeOfMovies_DecadeOfMoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8965C1557068B1E81E869077 /* Pods_DecadeOfMovies_DecadeOfMoviesUITests.framework */; };
 		C250C15624DDA31E007C7027 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C15524DDA31E007C7027 /* MovieCell.swift */; };
 		C250C15824DDD04C007C7027 /* MovieSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C15724DDD04C007C7027 /* MovieSection.swift */; };
+		C250C15A24DDE311007C7027 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C15924DDE311007C7027 /* MoviesRouter.swift */; };
+		C250C15D24DDE4F2007C7027 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C15C24DDE4F2007C7027 /* MovieDetailsViewController.swift */; };
+		C250C15F24DDE507007C7027 /* MovieDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C250C15E24DDE507007C7027 /* MovieDetailsViewController.storyboard */; };
+		C250C16124DDE763007C7027 /* FlickrKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16024DDE763007C7027 /* FlickrKeys.swift */; };
+		C250C16324DDEDA6007C7027 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16224DDEDA6007C7027 /* NetworkManager.swift */; };
+		C250C16524DDEDBF007C7027 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16424DDEDBF007C7027 /* URLs.swift */; };
+		C250C16724DDF2C4007C7027 /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16624DDF2C4007C7027 /* FlickrResponse.swift */; };
+		C250C16924DE0017007C7027 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */; };
 		C2DE13B224DD720700F269BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B124DD720700F269BB /* AppDelegate.swift */; };
 		C2DE13B624DD720700F269BB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B524DD720700F269BB /* AppRouter.swift */; };
 		C2DE13B924DD720700F269BB /* MoviesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13B724DD720700F269BB /* MoviesViewController.storyboard */; };
@@ -57,6 +65,14 @@
 		8CE781119F379847C6AA77AB /* Pods-DecadeOfMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecadeOfMovies.release.xcconfig"; path = "Target Support Files/Pods-DecadeOfMovies/Pods-DecadeOfMovies.release.xcconfig"; sourceTree = "<group>"; };
 		C250C15524DDA31E007C7027 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C250C15724DDD04C007C7027 /* MovieSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSection.swift; sourceTree = "<group>"; };
+		C250C15924DDE311007C7027 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
+		C250C15C24DDE4F2007C7027 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		C250C15E24DDE507007C7027 /* MovieDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailsViewController.storyboard; sourceTree = "<group>"; };
+		C250C16024DDE763007C7027 /* FlickrKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrKeys.swift; sourceTree = "<group>"; };
+		C250C16224DDEDA6007C7027 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C250C16424DDEDBF007C7027 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		C250C16624DDF2C4007C7027 /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
+		C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		C2DE13AE24DD720700F269BB /* DecadeOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecadeOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DE13B124DD720700F269BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DE13B524DD720700F269BB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -134,6 +150,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C250C15B24DDE4DD007C7027 /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				C250C15C24DDE4F2007C7027 /* MovieDetailsViewController.swift */,
+				C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */,
+				C250C15E24DDE507007C7027 /* MovieDetailsViewController.storyboard */,
+			);
+			path = "Movie Details";
+			sourceTree = "<group>";
+		};
 		C2DE13A524DD720700F269BB = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +190,7 @@
 				C2DE13B524DD720700F269BB /* AppRouter.swift */,
 				C2DE13E824DD7BA600F269BB /* Helpers */,
 				C2DE13E324DD796000F269BB /* Models */,
+				C2DE13F424DD812000F269BB /* Managers */,
 				C2DE13E224DD794900F269BB /* Scenes */,
 				C2DE13E124DD78DF00F269BB /* Supporting Files */,
 			);
@@ -201,8 +228,9 @@
 		C2DE13E224DD794900F269BB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C2DE13F424DD812000F269BB /* Managers */,
+				C250C16024DDE763007C7027 /* FlickrKeys.swift */,
 				C2DE13EF24DD7E1900F269BB /* Movies */,
+				C250C15B24DDE4DD007C7027 /* Movie Details */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -214,6 +242,7 @@
 				C2DE13F224DD7F9200F269BB /* FlickerImage.swift */,
 				C2DE13F724DD856800F269BB /* BaseResult.swift */,
 				C250C15724DDD04C007C7027 /* MovieSection.swift */,
+				C250C16624DDF2C4007C7027 /* FlickrResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +262,7 @@
 			children = (
 				C2DE13E624DD79A700F269BB /* MoviesViewController.swift */,
 				C2DE13F924DD8A6800F269BB /* MoviesViewModel.swift */,
+				C250C15924DDE311007C7027 /* MoviesRouter.swift */,
 				C2DE13B724DD720700F269BB /* MoviesViewController.storyboard */,
 				C250C15424DDA30E007C7027 /* Cell */,
 			);
@@ -243,6 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				C2DE13F524DD818700F269BB /* MovieFetcher.swift */,
+				C250C16224DDEDA6007C7027 /* NetworkManager.swift */,
+				C250C16424DDEDBF007C7027 /* URLs.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -369,6 +401,7 @@
 				C2DE13BE24DD720800F269BB /* LaunchScreen.storyboard in Resources */,
 				C2DE13BB24DD720800F269BB /* Assets.xcassets in Resources */,
 				C2DE13E524DD797E00F269BB /* movies.json in Resources */,
+				C250C15F24DDE507007C7027 /* MovieDetailsViewController.storyboard in Resources */,
 				C2DE13B924DD720700F269BB /* MoviesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,18 +530,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C250C16924DE0017007C7027 /* MovieDetailsViewModel.swift in Sources */,
 				C2DE13F324DD7F9200F269BB /* FlickerImage.swift in Sources */,
+				C250C16524DDEDBF007C7027 /* URLs.swift in Sources */,
+				C250C15A24DDE311007C7027 /* MoviesRouter.swift in Sources */,
 				C2DE13F824DD856800F269BB /* BaseResult.swift in Sources */,
 				C250C15624DDA31E007C7027 /* MovieCell.swift in Sources */,
 				C2DE13F124DD7E3200F269BB /* Movie.swift in Sources */,
+				C250C15D24DDE4F2007C7027 /* MovieDetailsViewController.swift in Sources */,
 				C2DE13B624DD720700F269BB /* AppRouter.swift in Sources */,
 				C2DE13FA24DD8A6800F269BB /* MoviesViewModel.swift in Sources */,
+				C250C16124DDE763007C7027 /* FlickrKeys.swift in Sources */,
 				C2DE13EE24DD7D8000F269BB /* Identifiable.swift in Sources */,
+				C250C16324DDEDA6007C7027 /* NetworkManager.swift in Sources */,
 				C250C15824DDD04C007C7027 /* MovieSection.swift in Sources */,
 				C2DE13ED24DD7D8000F269BB /* StoryboardInitializer.swift in Sources */,
 				C2DE13EC24DD7D8000F269BB /* Alert Extension.swift in Sources */,
 				C2DE13B224DD720700F269BB /* AppDelegate.swift in Sources */,
 				C2DE13F624DD818700F269BB /* MovieFetcher.swift in Sources */,
+				C250C16724DDF2C4007C7027 /* FlickrResponse.swift in Sources */,
 				C2DE13E724DD79A700F269BB /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

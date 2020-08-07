@@ -20,6 +20,7 @@ protocol MoviesBusinessLogic {
 }
 
 class MoviesViewModel: MoviesBusinessLogic {
+    // Variabels
     var lastSearchQuery: String = ""
     private var moviesManager: MoviesFetchable
     private var movies: [Movie] = []
