@@ -14,16 +14,22 @@ protocol MoviesFetchable {
 }
 
 class MoviesFetcher: MoviesFetchable {
+    var bundleParser: BundleParsable
+    
+    init(bundleParser: BundleParsable = BundleParser()) {
+        self.bundleParser = bundleParser
+    }
     
     func getMovies() -> [Movie] {
-        guard let path = Bundle.main.path(forResource: "movies", ofType: "json") else { return [] }
-        let url = URL(fileURLWithPath: path)
-        
         do {
-            let data = try Data(contentsOf: url)
-            guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else { return [] }
+            let data = try bundleParser.parse(fileName: "movies", ofType: "json")
+            
+            guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
+                return []
+            }
             
             let result = Mapper<BaseResult>().map(JSON: json)
+            
             return result?.movies ?? []
         }
         catch {

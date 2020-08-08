@@ -11,6 +11,7 @@ import ObjectMapper
 class BaseResult: Mappable {
     var movies: [Movie] = []
     
+    init() { }
     required init?(map: Map) { }
     
     func mapping(map: Map) {

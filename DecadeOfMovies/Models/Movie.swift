@@ -15,6 +15,7 @@ class Movie: Mappable {
     var genres: [String] = []
     var rating: Int = 0
     
+    init() { }
     required init?(map: Map) { }
     
     func mapping(map: Map) {

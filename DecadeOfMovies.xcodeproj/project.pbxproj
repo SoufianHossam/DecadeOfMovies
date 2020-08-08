@@ -22,12 +22,15 @@
 		C250C16924DE0017007C7027 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */; };
 		C25FF63E24DEE176002B1476 /* MoviePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */; };
 		C25FF64024DEE566002B1476 /* String Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF63F24DEE566002B1476 /* String Extensions.swift */; };
+		C25FF64224DEFCF1002B1476 /* ValidMovies.json in Resources */ = {isa = PBXBuildFile; fileRef = C25FF64124DEFCF1002B1476 /* ValidMovies.json */; };
+		C25FF64424DF0F23002B1476 /* BundleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF64324DF0F23002B1476 /* BundleParser.swift */; };
+		C25FF64624DF0FB1002B1476 /* BundleParserStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF64524DF0FB1002B1476 /* BundleParserStub.swift */; };
 		C2DE13B224DD720700F269BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B124DD720700F269BB /* AppDelegate.swift */; };
 		C2DE13B624DD720700F269BB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B524DD720700F269BB /* AppRouter.swift */; };
 		C2DE13B924DD720700F269BB /* MoviesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13B724DD720700F269BB /* MoviesViewController.storyboard */; };
 		C2DE13BB24DD720800F269BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13BA24DD720800F269BB /* Assets.xcassets */; };
 		C2DE13BE24DD720800F269BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13BC24DD720800F269BB /* LaunchScreen.storyboard */; };
-		C2DE13C924DD720900F269BB /* DecadeOfMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13C824DD720900F269BB /* DecadeOfMoviesTests.swift */; };
+		C2DE13C924DD720900F269BB /* MoviesFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13C824DD720900F269BB /* MoviesFetcherTests.swift */; };
 		C2DE13D424DD720900F269BB /* DecadeOfMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13D324DD720900F269BB /* DecadeOfMoviesUITests.swift */; };
 		C2DE13E524DD797E00F269BB /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13E424DD797E00F269BB /* movies.json */; };
 		C2DE13E724DD79A700F269BB /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13E624DD79A700F269BB /* MoviesViewController.swift */; };
@@ -77,6 +80,9 @@
 		C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePhotoCell.swift; sourceTree = "<group>"; };
 		C25FF63F24DEE566002B1476 /* String Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extensions.swift"; sourceTree = "<group>"; };
+		C25FF64124DEFCF1002B1476 /* ValidMovies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidMovies.json; sourceTree = "<group>"; };
+		C25FF64324DF0F23002B1476 /* BundleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleParser.swift; sourceTree = "<group>"; };
+		C25FF64524DF0FB1002B1476 /* BundleParserStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleParserStub.swift; sourceTree = "<group>"; };
 		C2DE13AE24DD720700F269BB /* DecadeOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecadeOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DE13B124DD720700F269BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DE13B524DD720700F269BB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -85,7 +91,7 @@
 		C2DE13BD24DD720800F269BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2DE13BF24DD720800F269BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2DE13C424DD720900F269BB /* DecadeOfMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecadeOfMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2DE13C824DD720900F269BB /* DecadeOfMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecadeOfMoviesTests.swift; sourceTree = "<group>"; };
+		C2DE13C824DD720900F269BB /* MoviesFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesFetcherTests.swift; sourceTree = "<group>"; };
 		C2DE13CA24DD720900F269BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2DE13CF24DD720900F269BB /* DecadeOfMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecadeOfMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DE13D324DD720900F269BB /* DecadeOfMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecadeOfMoviesUITests.swift; sourceTree = "<group>"; };
@@ -146,6 +152,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C2231D8824DF1B430042642B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE13C824DD720900F269BB /* MoviesFetcherTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		C250C15424DDA30E007C7027 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +177,14 @@
 				C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */,
 			);
 			path = "Movie Details";
+			sourceTree = "<group>";
+		};
+		C25FF64724DF0FCB002B1476 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				C25FF64524DF0FB1002B1476 /* BundleParserStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		C2DE13A524DD720700F269BB = {
@@ -205,8 +227,10 @@
 		C2DE13C724DD720900F269BB /* DecadeOfMoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				C2DE13C824DD720900F269BB /* DecadeOfMoviesTests.swift */,
+				C25FF64124DEFCF1002B1476 /* ValidMovies.json */,
 				C2DE13CA24DD720900F269BB /* Info.plist */,
+				C25FF64724DF0FCB002B1476 /* Stubs */,
+				C2231D8824DF1B430042642B /* Tests */,
 			);
 			path = DecadeOfMoviesTests;
 			sourceTree = "<group>";
@@ -278,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				C2DE13F524DD818700F269BB /* MovieFetcher.swift */,
+				C25FF64324DF0F23002B1476 /* BundleParser.swift */,
 				C250C16024DDE763007C7027 /* FlickrKeys.swift */,
 				C250C16424DDEDBF007C7027 /* URLs.swift */,
 				C250C16224DDEDA6007C7027 /* NetworkManager.swift */,
@@ -416,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25FF64224DEFCF1002B1476 /* ValidMovies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +571,7 @@
 				C2DE13F124DD7E3200F269BB /* Movie.swift in Sources */,
 				C250C15D24DDE4F2007C7027 /* MovieDetailsViewController.swift in Sources */,
 				C2DE13B624DD720700F269BB /* AppRouter.swift in Sources */,
+				C25FF64424DF0F23002B1476 /* BundleParser.swift in Sources */,
 				C2DE13FA24DD8A6800F269BB /* MoviesViewModel.swift in Sources */,
 				C250C16124DDE763007C7027 /* FlickrKeys.swift in Sources */,
 				C2DE13EE24DD7D8000F269BB /* Identifiable.swift in Sources */,
@@ -565,7 +592,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2DE13C924DD720900F269BB /* DecadeOfMoviesTests.swift in Sources */,
+				C25FF64624DF0FB1002B1476 /* BundleParserStub.swift in Sources */,
+				C2DE13C924DD720900F269BB /* MoviesFetcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
