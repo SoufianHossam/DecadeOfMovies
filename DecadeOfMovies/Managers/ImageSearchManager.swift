@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  ImageSearchManager.swift
 //  DecadeOfMovies
 //
 //  Created by Soufian Hossam on 8/7/20.

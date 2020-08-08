@@ -34,6 +34,8 @@ class MovieDetailsViewModel: MovieDetailsBusinessLogic {
     }
     
     func fetchImages() {
+        // The best practice here is to use pagination but for the sake of simplicity
+        // the api retunes just 25 photos
         imageSearchManager.fetchImages(query: movie.title) { [unowned self] images in
             self.imagePaths = images.map({ $0.imagePath })
         }

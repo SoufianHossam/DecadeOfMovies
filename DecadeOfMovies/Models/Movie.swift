@@ -17,6 +17,12 @@ class Movie: Mappable {
     
     init() { }
     required init?(map: Map) { }
+
+    init(title: String, year: Int, rating: Int) {
+        self.title = title
+        self.year = year
+        self.rating = rating
+    }
     
     func mapping(map: Map) {
         title <- map["title"]

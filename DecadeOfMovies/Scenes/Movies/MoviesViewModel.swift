@@ -50,7 +50,9 @@ class MoviesViewModel: MoviesBusinessLogic {
     }
     
     func search(query: String?) {
-        guard let query = query, !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        let query = (query ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !query.isEmpty else { return }
+        
         lastSearchQuery = query
         
         let filteredMovies = movies.filter({

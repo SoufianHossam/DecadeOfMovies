@@ -17,12 +17,17 @@ public class BundleParserStub: BundleParsable {
     }
     
     public func parse(fileName: String, ofType: String) throws -> Data {
+        let data: Data
+        
         if shouldSucceed {
             let baseResult = BaseResult()
             baseResult.movies = [Movie(), Movie(), Movie(), Movie()]
-            return baseResult.toJSONString()!.data(using: .utf8) ?? Data()
+            data = baseResult.toJSONString()!.data(using: .utf8) ?? Data()
+            
         } else {
-            return "".data(using: .utf8) ?? Data()
+            data = "".data(using: .utf8) ?? Data()
         }
+        
+        return data
     }
 }
