@@ -20,6 +20,8 @@
 		C250C16524DDEDBF007C7027 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16424DDEDBF007C7027 /* URLs.swift */; };
 		C250C16724DDF2C4007C7027 /* FlickrResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16624DDF2C4007C7027 /* FlickrResponse.swift */; };
 		C250C16924DE0017007C7027 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */; };
+		C25FF63E24DEE176002B1476 /* MoviePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */; };
+		C25FF64024DEE566002B1476 /* String Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FF63F24DEE566002B1476 /* String Extensions.swift */; };
 		C2DE13B224DD720700F269BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B124DD720700F269BB /* AppDelegate.swift */; };
 		C2DE13B624DD720700F269BB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE13B524DD720700F269BB /* AppRouter.swift */; };
 		C2DE13B924DD720700F269BB /* MoviesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DE13B724DD720700F269BB /* MoviesViewController.storyboard */; };
@@ -73,6 +75,8 @@
 		C250C16424DDEDBF007C7027 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		C250C16624DDF2C4007C7027 /* FlickrResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrResponse.swift; sourceTree = "<group>"; };
 		C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePhotoCell.swift; sourceTree = "<group>"; };
+		C25FF63F24DEE566002B1476 /* String Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extensions.swift"; sourceTree = "<group>"; };
 		C2DE13AE24DD720700F269BB /* DecadeOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecadeOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DE13B124DD720700F269BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2DE13B524DD720700F269BB /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				C250C15C24DDE4F2007C7027 /* MovieDetailsViewController.swift */,
 				C250C16824DE0017007C7027 /* MovieDetailsViewModel.swift */,
 				C250C15E24DDE507007C7027 /* MovieDetailsViewController.storyboard */,
+				C25FF63D24DEE176002B1476 /* MoviePhotoCell.swift */,
 			);
 			path = "Movie Details";
 			sourceTree = "<group>";
@@ -228,7 +233,6 @@
 		C2DE13E224DD794900F269BB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				C250C16024DDE763007C7027 /* FlickrKeys.swift */,
 				C2DE13EF24DD7E1900F269BB /* Movies */,
 				C250C15B24DDE4DD007C7027 /* Movie Details */,
 			);
@@ -253,6 +257,7 @@
 				C2DE13E924DD7D8000F269BB /* Alert Extension.swift */,
 				C2DE13EB24DD7D8000F269BB /* Identifiable.swift */,
 				C2DE13EA24DD7D8000F269BB /* StoryboardInitializer.swift */,
+				C25FF63F24DEE566002B1476 /* String Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,8 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				C2DE13F524DD818700F269BB /* MovieFetcher.swift */,
-				C250C16224DDEDA6007C7027 /* NetworkManager.swift */,
+				C250C16024DDE763007C7027 /* FlickrKeys.swift */,
 				C250C16424DDEDBF007C7027 /* URLs.swift */,
+				C250C16224DDEDA6007C7027 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -546,7 +552,9 @@
 				C250C15824DDD04C007C7027 /* MovieSection.swift in Sources */,
 				C2DE13ED24DD7D8000F269BB /* StoryboardInitializer.swift in Sources */,
 				C2DE13EC24DD7D8000F269BB /* Alert Extension.swift in Sources */,
+				C25FF64024DEE566002B1476 /* String Extensions.swift in Sources */,
 				C2DE13B224DD720700F269BB /* AppDelegate.swift in Sources */,
+				C25FF63E24DEE176002B1476 /* MoviePhotoCell.swift in Sources */,
 				C2DE13F624DD818700F269BB /* MovieFetcher.swift in Sources */,
 				C250C16724DDF2C4007C7027 /* FlickrResponse.swift in Sources */,
 				C2DE13E724DD79A700F269BB /* MoviesViewController.swift in Sources */,

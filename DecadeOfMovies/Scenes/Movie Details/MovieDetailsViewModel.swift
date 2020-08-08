@@ -9,16 +9,23 @@
 import Foundation
 
 protocol MovieDetailsBusinessLogic {
-    var movie: Movie { get set }
-    var imageSearchManager: ImageSearchable { get set }
+    var movie: Movie { get }
+    var imagePaths: [URL?] { get }
     var newDataArrived: (() -> Void)? { set get }
     
     func fetchImages()
 }
 
 class MovieDetailsViewModel: MovieDetailsBusinessLogic {
-    var movie: Movie
-    var imageSearchManager: ImageSearchable
+    // Variables
+    private var imageSearchManager: ImageSearchable
+    private(set) var movie: Movie
+    private(set) var imagePaths: [URL?] = [] {
+        didSet {
+            imagePaths.isEmpty ? nil : newDataArrived?()
+        }
+    }
+    // Closures
     var newDataArrived: (() -> Void)?
     
     init(movie: Movie, imageSearchManager: ImageSearchable = ImageSearchManager()) {
@@ -27,6 +34,8 @@ class MovieDetailsViewModel: MovieDetailsBusinessLogic {
     }
     
     func fetchImages() {
-        
+        imageSearchManager.fetchImages(query: movie.title) { [unowned self] images in
+            self.imagePaths = images.map({ $0.imagePath })
+        }
     }
 }

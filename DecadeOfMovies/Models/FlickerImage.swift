@@ -14,7 +14,10 @@ class FlickerImage: Mappable {
     var server: String = ""
     var farm: Int = 0
     var title: String = ""
-    var imagePath: String { String(format: URLs.imagePath, farm, server, id, secret) }
+    var imagePath: URL? {
+        let urlString = String(format: URLs.imagePath, farm, server, id, secret)
+        return URL(string: urlString)
+    }
     
     required init?(map: Map) { }
     

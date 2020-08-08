@@ -9,6 +9,6 @@
 import Foundation
 
 enum URLs {
-    static let flickrPhotoSearch = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(FlickrKeys.apiKey)&format=json&nojsoncallback=1&per_page=15&text="
+    static let flickrPhotoSearch = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(FlickrKeys.apiKey)&format=json&nojsoncallback=1&per_page=25&text="
     static let imagePath = "https://farm%d.staticflickr.com/%@/%@_%@.jpg"
 }

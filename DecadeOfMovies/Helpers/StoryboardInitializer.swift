@@ -18,3 +18,4 @@ extension StoryboardInitializer where Self: UIViewController {
 
 extension UIViewController: StoryboardInitializer, Identifiable { }
 extension UITableViewCell: Identifiable { }
+extension UICollectionViewCell: Identifiable { }
